@@ -1,37 +1,57 @@
 # Binary Search
 
+## Problem Link
+
+https://leetcode.com/problems/binary-search/
+
 ## Problem
+
 Given a sorted array of integers and a target value, find the index of the target. If the target is not present, return -1.
 
 ## Approach
-- Set two pointers: `left` at the beginning and `right` at the end.
-- Find the middle element.
-- If the middle element is the target, return its index.
-- If the middle element is smaller than the target, search the right half.
-- Otherwise, search the left half.
-- Continue until the target is found or the search range becomes empty.
 
-## Time Complexity
-O(log n)
+I use two pointers, `left` and `right`, to represent the current search range.
 
-## Space Complexity
-O(1)
+I find the middle element of the range.
+
+- If the middle element is equal to the target, I return its index.
+- If the middle element is smaller than the target, I search the right half.
+- Otherwise, I search the left half.
+
+I continue until the target is found or the search range becomes empty.
+
+## Complexity
+
+- Time Complexity: O(log n)
+- Space Complexity: O(1)
 
 ## Local Test Cases
 
-### Test Case 1
+### Test Case 1 - Typical Case
+
 Input:
-`[1,3,5,7,9]`, target = `7`
+
+Array = [1, 3, 5, 7, 9]
+
+Target = 7
 
 Output:
-`3`
 
-### Test Case 2
+3
+
+### Test Case 2 - Edge Case
+
 Input:
-`[1,3,5,7,9]`, target = `4`
+
+Array = [1, 3, 5, 7, 9]
+
+Target = 4
 
 Output:
-`-1`
+
+-1
 
 ## Notes
-Binary search works only when the array is sorted.
+
+- Binary search works on a sorted array.
+- I tested both a case where the target is present and a case where it is not present.
